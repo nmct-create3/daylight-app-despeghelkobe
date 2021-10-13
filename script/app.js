@@ -13,6 +13,9 @@ function _parseMillisecondsIntoReadableTime(timestamp) {
 	return hours.substr(-2) + ':' + minutes.substr(-2); //  + ':' + s
 }
 
+//
+
+
 // 5 TODO: maak updateSun functie
 
 // 4 Zet de zon op de juiste plaats en zorg ervoor dat dit iedere minuut gebeurt.
@@ -41,6 +44,8 @@ let showResult = queryResponse => {
 // 2 Aan de hand van een longitude en latitude gaan we de yahoo wheater API ophalen.
 let getAPI = (lat, lon) => {
 	// Eerst bouwen we onze url op
+	let APIid = '73bd2f9ef88033fbf1a7774d92fa819e'
+	let url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIid}&units=metric&lang=nl&cnt=1`
 	// Met de fetch API proberen we de data op te halen.
 	// Als dat gelukt is, gaan we naar onze showResult functie.
 };
